@@ -24,7 +24,7 @@ const MyChat = ({fetchAgain}) => {
           Authorization: `Bear ${user.token}`
         }
       };
-      const {data} = await axios.get('http://127.0.0.1:5000/api/chat',config)
+      const {data} = await axios.get('https://chap-app-otxn.onrender.com/api/chat',config)
       setChats(data)
     }catch(err){
       console.log(err)

@@ -12,7 +12,7 @@ import ScrollableChat from '../userAvatar/ScrollableChat.js'
 import io from 'socket.io-client'
 import animationData from '../../animation/typing.json'
 
-const ENDPOINT = "http://127.0.0.1:5000";
+const ENDPOINT = "https://chap-app-otxn.onrender.com";
 var socket, selectedChatCompare;
 
 
@@ -39,7 +39,7 @@ const SingleChat = ({fetchAgain ,setFetchAgain}) => {
         setLoading(true)
         
         try{
-            const {data} = await axios.get(`http://127.0.0.1:5000/api/message/${selectedChat._id}`,config)
+            const {data} = await axios.get(`https://chap-app-otxn.onrender.com/api/message/${selectedChat._id}`,config)
             setMessages(data)
             setLoading(false)
             socket.emit('join chat',selectedChat._id)
@@ -68,7 +68,7 @@ const SingleChat = ({fetchAgain ,setFetchAgain}) => {
                     }
                 }
 
-                const {data} = await axios.post("http://127.0.0.1:5000/api/message",{
+                const {data} = await axios.post("https://chap-app-otxn.onrender.com/api/message",{
                     content: newMessage,
                     chatId: selectedChat._id
                 },config)
