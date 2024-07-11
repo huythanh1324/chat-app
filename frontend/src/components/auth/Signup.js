@@ -82,7 +82,7 @@ const Signup = () => {
                     "Content-type":"application/json",
                 },
             }
-            const {data} = await axios.post('http://localhost:5000/api/user/register',{name,email,password,pic}, config)
+            const {data} = await axios.post('http://127.0.0.1:5000/api/user/register',{name,email,password,pic}, config)
             toast({
                 title: "Registration Successful",
                 status: "success",

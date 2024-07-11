@@ -45,7 +45,7 @@ const SideDrawer = () => {
         }
       }
 
-      const {data} = await axios.get(`http://localhost:5000/api/user?search=${search}`, config)
+      const {data} = await axios.get(`http://127.0.0.1:5000/api/user?search=${search}`, config)
       setLoading(false)
       setSearchResult(data)
     }catch(err){
@@ -71,7 +71,7 @@ const SideDrawer = () => {
         }
       }
 
-      const {data} = await axios.post('http://localhost:5000/api/chat', {userId}, config)
+      const {data} = await axios.post('http://127.0.0.1:5000/api/chat', {userId}, config)
       if(!chats.find((chat) => chat._id === data._id)) setChats(prev => [...prev,data])
       setSelectedChat(data)
       setLoading(false) 

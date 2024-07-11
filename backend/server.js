@@ -1,5 +1,4 @@
 
-
 const express = require('express');
 const connectToDB = require('./config/db.js')
 const dotenv = require('dotenv');
@@ -23,7 +22,7 @@ app.use('/api/user',userRouter)
 app.use('/api/chat',chatRouter)
 app.use('/api/message',messageRouter)
 
-// Deployment 
+// ------------ Deployment -------------
 const __dirname1 = path.resolve()
 if(process.env.NODE_ENV){
     app.use(express.static(path.join(__dirname1, '/frontend/build')))
@@ -36,7 +35,7 @@ if(process.env.NODE_ENV){
     }) 
 }
 
-// Deployment 
+//---------- Deployment -----------
 
 app.use(notFound)
 app.use(errorHandler)
