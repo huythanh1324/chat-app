@@ -58,6 +58,7 @@ const registerUser = asyncHandler(async (req, res) => {
 //@route           POST /api/user/login
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
+  console.log("logged in")
 
   const user = await User.findOne({ email });
 

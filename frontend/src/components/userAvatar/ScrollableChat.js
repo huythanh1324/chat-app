@@ -13,7 +13,7 @@ const ScrollableChat = ({messages}) => {
                 {
                     (isSameSender(messages,m,i,user._id) || isLastMessage(messages,i,user._id)) && 
                     (<Tooltip label={m.sender.name} placement="bottom-start" hasArrow>
-                        <Avatar mt={7} mr={1} size='sm' cursor="pointer" name={m.sender.name} src={m.sender.pic} />
+                        <Avatar mt={2} mr={1} size='sm' cursor="pointer" name={m.sender.name} src={m.sender.pic} />
                     </Tooltip>)
                 }
                 <span style={{backgroundColor: `${m.sender._id === user._id ? "#BEE3F8" :"#B9F5D0"}`,

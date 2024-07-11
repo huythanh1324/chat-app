@@ -63,11 +63,11 @@ const Login = () => {
   return (
     <VStack spacing='5px'>
         <FormControl id='email'isRequired>
-            <FormLabel>Email</FormLabel>
+            <FormLabel>Email (Test: guest@example.com)</FormLabel>
             <Input placeholder='Enter your email' onChange={(e) => setEmail(e.target.value)}/>
         </FormControl>
         <FormControl id='password' isRequired>
-            <FormLabel>Password</FormLabel>
+            <FormLabel>Password(Test: 123456)</FormLabel>
             <InputGroup>
                 <Input type={show ? 'text' :'password'} placeholder='Enter your password' onChange={(e) => setPassword(e.target.value)}/>
                 <InputRightElement width="4.5rem">
