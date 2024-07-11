@@ -43,7 +43,7 @@ const GroupChatModal = ({children}) => {
         }
       }
 
-      const {data} = await axios.get(`http://127.0.0.1:5000/api/user?search=${search}`,config);
+      const {data} = await axios.get(`https://chap-app-otxn.onrender.com/api/user?search=${search}`,config);
       console.log(data)
       setLoading(false)
       setSearchResults(data)
@@ -78,7 +78,7 @@ const GroupChatModal = ({children}) => {
           Authorization: `Bear ${user.token}`
         }
       }
-      const {data} = await axios.post("http://127.0.0.1:5000/api/chat/group",{
+      const {data} = await axios.post("https://chap-app-otxn.onrender.com/api/chat/group",{
         name: groupChatName, 
         users:JSON.stringify(selectedUsers.map(user=>user._id))
       },config)
